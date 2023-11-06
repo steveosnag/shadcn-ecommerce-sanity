@@ -10,7 +10,7 @@ import {
 import Image from "next/image";
 import { useShoppingCart } from "use-shopping-cart";
 
-export default function ShoppingCartModal() {
+const ShoppingCartModal = () => {
   const {
     cartCount,
     shouldDisplayCart,
@@ -121,3 +121,5 @@ export default function ShoppingCartModal() {
     </Sheet>
   );
 }
+
+export default ShoppingCartModal;
