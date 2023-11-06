@@ -78,7 +78,7 @@ const ProductPage = async ({ params }: { params: { slug: string } }) => {
 
             <div className="flex gap-2.5">
               <AddToBag
-                currency="USD"
+                currency="ZAR"
                 description={data.description}
                 image={data.images[0]}
                 name={data.name}
@@ -87,7 +87,7 @@ const ProductPage = async ({ params }: { params: { slug: string } }) => {
                 key={data._id}
               />
               <CheckoutNow 
-                currency="USD"
+                currency="ZAR"
                 description={data.description}
                 image={data.images[0]}
                 name={data.name}
