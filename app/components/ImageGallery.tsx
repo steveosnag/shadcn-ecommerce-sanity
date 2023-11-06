@@ -27,6 +27,7 @@ const ImageGallery = ({ images }: iAppProps) => {
               alt="photo"
               className="h-full w-full object-cover object-center cursor-pointer"
               onClick={() => handleSmallImageClick(image)}
+              onMouseEnter={() => handleSmallImageClick(image)}
             />
           </div>
         ))}
