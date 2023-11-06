@@ -1,4 +1,5 @@
 import AddToBag from "@/app/components/AddToBag";
+import CheckoutNow from "@/app/components/CheckoutNow";
 import ImageGallery from "@/app/components/ImageGallery";
 import { fullProduct } from "@/app/interface";
 import { client } from "@/app/lib/sanity";
@@ -22,6 +23,8 @@ async function getDate(slug: string) {
 
   return data;
 }
+
+export const dynamic = 'force-dynamic';
 
 const ProductPage = async ({ params }: { params: { slug: string } }) => {
   const data: fullProduct = await getDate(params.slug);
@@ -75,7 +78,7 @@ const ProductPage = async ({ params }: { params: { slug: string } }) => {
 
             <div className="flex gap-2.5">
               <AddToBag
-                currency="USD"
+                currency="ZAR"
                 description={data.description}
                 image={data.images[0]}
                 name={data.name}
@@ -83,7 +86,15 @@ const ProductPage = async ({ params }: { params: { slug: string } }) => {
                 price_id={data.price_id}
                 key={data._id}
               />
-              <Button variant="secondary">Checkout now</Button>
+              <CheckoutNow 
+                currency="ZAR"
+                description={data.description}
+                image={data.images[0]}
+                name={data.name}
+                price={data.price}
+                price_id={data.price_id}
+                key={data._id}
+              />
             </div>
 
             <p className="mt-12 text-base text-gray-500 tracking-wide">

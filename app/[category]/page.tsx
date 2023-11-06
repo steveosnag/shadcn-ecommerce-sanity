@@ -16,7 +16,10 @@ async function getData(category: string) {
   const data = await client.fetch(query);
 
   return data;
-}
+};
+
+// server requests must be dynamic 
+export const dynamic = 'force-dynamic';
 
 const CategoryPage = async ({ 
   params 
