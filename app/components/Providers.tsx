@@ -10,7 +10,7 @@ const CartProvider = ({ children }: { children: ReactNode }) => {
       cartMode="client-only"
       stripe={process.env.NEXT_PUBLIC_STRIPE_KEY as string}
       successUrl="https://shadcn-ecommerce-sanity.vercel.app/stripe/success"
-      cancelUrl="https://shadcn-ecommerce-sanity.vercel.app/http://localhost:3000/stripe/error"
+      cancelUrl="https://shadcn-ecommerce-sanity.vercel.app/stripe/error"
       currency="ZAR"
       //allowedCountries={['US', 'GB', 'CA']}
       billingAddressCollection={true}

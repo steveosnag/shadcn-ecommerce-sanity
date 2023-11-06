@@ -6,11 +6,11 @@ import { urlFor } from "../lib/sanity";
 import { ProductCart } from "./AddToBag";
 
 const CheckoutNow = ({
-  name,
-  description,
-  price,
   currency,
+  description,
   image,
+  name,
+  price,
   price_id,
 }: ProductCart) => {
   const { checkoutSingleItem } = useShoppingCart();
